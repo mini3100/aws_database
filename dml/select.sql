@@ -43,3 +43,29 @@ GROUP BY
 	student_age
 having
 	total_score = 40;
+
+# 모든 데이터들에 대한 개수 (라인 수)
+select
+	count(*)
+from
+	student_tb;
+
+select
+	count(*)
+from
+	student_tb
+where
+	student_age = 20;
+
+# 성적 순으로 정렬
+select
+	*
+from
+	student_tb
+order by
+	student_score desc, 
+    student_id desc;
+    
+    
+    
+    
