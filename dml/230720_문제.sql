@@ -24,8 +24,8 @@ select
     ct.category_name,
     count(*) as total_count_product
 from
-	product_tb pt
-    left outer join category_tb ct on (ct.category_id = pt.category_id)
+	category_tb ct
+    left outer join product_tb pt on (pt.category_id = ct.category_id)
 group by
 	ct.category_id,
     ct.category_name;
